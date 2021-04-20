@@ -1,37 +1,59 @@
-## Welcome to GitHub Pages 
+## Procedural generator for exteriors of Stockholm style buildings
 
-You can use the [editor on GitHub](https://github.com/annatranquillini/Procedural-generator-for-exteriors-of-Stockholmstyle-buildings/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
-fd
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Background
 
-### Markdown
+This project aims to develop a procedural generator for exteriors (building facades) of Stockholm-style buildings.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The creation of compelling models is a crucial task in the development of successful movies and computer games. However, modeling complex three-dimensional elements, such as buildings, is a very expensive process and can require several man-years worth of labor.\citep{muller} 
+A solution to this can either be
+to reuse content throughout the world or to utilize procedural-generated content.
 
-```markdown
-Syntax highlighted code block
+The main advantages of procedural generation are to avoid the repetition given by reused content, allow for more realistic scenarios and also give the possibility to generate personalized environments. On the other side, the drawbacks of this technology are the increased computational complexity and the risk of generating non-realistic or non-plausible structures.
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+### Stockholm style building
 
-1. Numbered
-2. List
+Stockholm's architecture has a variegated history that dates back to the 13th century, therefore one of the biggest challenges will be to define what a Stockholm-style building is. 
 
-**Bold** and _Italic_ and `Code` text
+The project will focus on the generation of buildings in a specific area of the city: the main idea is to create residential/office buildings of the Nyrenässans ( 1800-1900) architectural style which is really common in areas such as Odenplan and Östermalm.
 
-[Link](url) and ![Image](src)
-```
+Some of the common characteristics of these houses are:
+- Heavy  use of pilasters around windows and everywhere on the facade,
+- Small temple-like roofs  above windows and doors,
+- Each floor is usually marked with rustics or band effects
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Below some pictures showing the chosen architectural style.
+<p float="left">
+<img src="https://user-images.githubusercontent.com/37111311/115450819-ae2e8380-a21c-11eb-9015-6a48c76fd9a8.jpg" alt="drawing" width="200"/>
+<img src="https://user-images.githubusercontent.com/37111311/115450823-aec71a00-a21c-11eb-8bf2-9b6c3f8fcbdb.jpg" alt="drawing" width="200"/>
+<img src="https://user-images.githubusercontent.com/37111311/115450826-af5fb080-a21c-11eb-9584-2091c36a41aa.jpg" alt="drawing" width="200"/>
+</p>
 
-### Jekyll Themes
+### Implementation Steps
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/annatranquillini/Procedural-generator-for-exteriors-of-Stockholmstyle-buildings/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+The procedural generator will be built with the Unity engine, but before starting the implementation further research must be completed.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+In particular, the following are the steps that I'm gonna take to work on this project:
+
+
+1. Creation of the blog
+2. Research on procedural generation of buildings and Shape Grammars\cite{muller}
+3. Manual generation of a simple Grammar 
+4. Coding of algorithms in unity for the grammar and its input in the system
+5. Graphical creation of the terminal elements of the grammar in Unity
+6. Procedural Generation of simple buildings
+7. Creation of a more complex grammar (Manual or Inverse Procedural Generation)
+8. Procedural Generation of more complex buildings
+9. Post processing (occlusion handling)
+
+### Perceptual Study
+
+The perceptual study will take inspiration from a thesis on the Perception of procedurally generated virtual buildings done in 2018 at a KTH and a thesis on Detailed Procedurally Generated Buildings done in Linköping University\.
+The idea at the moment is to present to the participants of the study a set of generated buildings and ask them to rank them based on the perceived variety of the buildings and how realistic they look. Further thought must be put on how to measure whether the set of buildings fit into the 'Stockholm building' category.
+
+### Extensions
+
+The most important possible extensions to the project regard the refinement of the grammar to create a more variegated and realistic building and the refinement of the post processing algorithm to deal with issues such as occlusion.
+
+Another possible extensions is to create an inverse procedural generation algorithm, but this task will probabily fall outside the scope of the project.
