@@ -1,5 +1,7 @@
 ## Procedural generator for exteriors of Stockholm style buildings
 
+<h1> Week 1 </h1>
+
 ### Background
 
 This project aims to develop a procedural generator for exteriors (building facades) of Stockholm-style buildings.
