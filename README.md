@@ -1,4 +1,4 @@
-# Procedural-generator-for-exteriors-of-Stockholmstyle-buildings
+# Procedural generator for exteriors of Stockholmstyle buildings
 This project aims to develop a procedural generator for exteriors (building facades) of Stockholm-style buildings.
 
 The creation of compelling models is a crucial task in the development of successful movies and computer games. However, modeling complex three-dimensional elements, such as buildings, is a very expensive process and can require several man-years worth of labor.
