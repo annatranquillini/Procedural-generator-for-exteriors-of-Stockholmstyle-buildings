@@ -75,15 +75,12 @@ By starting from his work and developing my own rules, I manged to create quickl
 
 <div class="embed-container">
   <iframe
-      src="https://github.com/annatranquillini/Procedural-generator-for-exteriors-of-Stockholmstyle-buildings/blob/main/docs/videos/movie_002.mp4"
-      width="700"
-      height="480"
+      src="https://player.vimeo.com/video/542822172"
+      width="500"
+      height="281"
       frameborder="0"
-      allowfullscreen="">
+      webkitallowfullscreen
+      mozallowfullscreen
+      allowfullscreen>
   </iframe>
 </div>
-
-
-<video width="320" height="240" controls>
-  <source type="video/mp4" src="https://github.com/annatranquillini/Procedural-generator-for-exteriors-of-Stockholmstyle-buildings/blob/main/docs/videos/movie_002.mp4">
-</video>
