@@ -70,3 +70,7 @@ generated virtual buildings. Gylleus had made use of a split grammar, which uses
  -protrude(XYZ) rescales a shape and moves it accordingly to the new size. Used for example to protrude a pillar/balcony from a facade wall.
 
 By starting from his work and developing my own rules, I manged to create quickly a first prototype of the model.
+
+<video width="320" height="240" controls>
+  <source type="video/mp4" src="https://github.com/annatranquillini/Procedural-generator-for-exteriors-of-Stockholmstyle-buildings/blob/main/docs/videos/movie_002.mp44">
+</video>
