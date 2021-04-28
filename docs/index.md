@@ -66,12 +66,12 @@ Another possible extensions is to create an inverse procedural generation algori
 During the second week I started working on understanding how to develop a grammar and I took inspiration of the work done by Karl Gylleus during his thesis on procedurally
 generated virtual buildings. Gylleus had made use of a split grammar, which uses the rules: split, repeat, decompose and protrude.
 
- - split(X,Y,Z) splits the left shapes into the given shapes on the right.
- - repeat(X,Y,Z) works as the split rule but repeats a pattern as many types as there are space.
- - decompose(XYZ) hollows out a cube and leaves the surfaces as thin cubes representing the facades. Simulates going down in dimensionality.
- - protrude(XYZ) rescales a shape and moves it accordingly to the new size. Used for example to protrude a pillar/balcony from a facade wall.
+ - **split(X,Y,Z)** splits the left shapes into the given shapes on the right.
+ - **repeat(X,Y,Z)** works as the split rule but repeats a pattern as many types as there are space.
+ - **decompose(XYZ)** hollows out a cube and leaves the surfaces as thin cubes representing the facades. Simulates going down in dimensionality.
+ - **protrude(XYZ)** rescales a shape and moves it accordingly to the new size. Used for example to protrude a pillar/balcony from a facade wall.
 
-By starting from his work and developing my own rules, I manged to create quickly a first prototype of the model.
+By starting from his work and developing my own rules, I manged to create quickly a first prototype of the model. A short video of the first prototype can be seen below.
 
 <div class="embed-container">
   <iframe
@@ -84,3 +84,7 @@ By starting from his work and developing my own rules, I manged to create quickl
       allowfullscreen>
   </iframe>
 </div>
+
+The next step will be to understand if I can easly manage to adapt this shape grammar to the flexibility I need for the buildings. If not, other ways of implementation will be taken in consideration.
+
+**Papers:** Perception of procedurally generated virtual buildings by Karl Gylleus and Procedural Modeling of Buildings by Muller, Wonka et Al.
