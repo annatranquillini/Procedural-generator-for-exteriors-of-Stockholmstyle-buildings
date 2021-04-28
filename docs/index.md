@@ -60,17 +60,30 @@ The most important possible extensions to the project regard the refinement of t
 
 Another possible extensions is to create an inverse procedural generation algorithm, but this task will probabily fall outside the scope of the project.
 
+<h1> Week 2 </h1>
+
 ### Grammar
 During the second week I started working on understanding how to develop a grammar and I took inspiration of the work done by Karl Gylleus during his thesis on procedurally
 generated virtual buildings. Gylleus had made use of a split grammar, which uses the rules: split, repeat, decompose and protrude.
 
- -split(X,Y,Z) splits the left shapes into the given shapes on the right.
- -repeat(X,Y,Z) works as the split rule but repeats a pattern as many types as there are space.
- -decompose(XYZ) hollows out a cube and leaves the surfaces as thin cubes representing the facades. Simulates going down in dimensionality.
- -protrude(XYZ) rescales a shape and moves it accordingly to the new size. Used for example to protrude a pillar/balcony from a facade wall.
+ - split(X,Y,Z) splits the left shapes into the given shapes on the right.
+ - repeat(X,Y,Z) works as the split rule but repeats a pattern as many types as there are space.
+ - decompose(XYZ) hollows out a cube and leaves the surfaces as thin cubes representing the facades. Simulates going down in dimensionality.
+ - protrude(XYZ) rescales a shape and moves it accordingly to the new size. Used for example to protrude a pillar/balcony from a facade wall.
 
 By starting from his work and developing my own rules, I manged to create quickly a first prototype of the model.
 
+<div class="embed-container">
+  <iframe
+      src="https://github.com/annatranquillini/Procedural-generator-for-exteriors-of-Stockholmstyle-buildings/blob/main/docs/videos/movie_002.mp4"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+
 <video width="320" height="240" controls>
-  <source type="video/mp4" src="https://github.com/annatranquillini/Procedural-generator-for-exteriors-of-Stockholmstyle-buildings/blob/main/docs/videos/movie_002.mp44">
+  <source type="video/mp4" src="https://github.com/annatranquillini/Procedural-generator-for-exteriors-of-Stockholmstyle-buildings/blob/main/docs/videos/movie_002.mp4">
 </video>
