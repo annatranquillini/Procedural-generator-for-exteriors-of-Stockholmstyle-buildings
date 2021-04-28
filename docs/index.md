@@ -57,3 +57,14 @@ The idea at the moment is to present to the participants of the study a set of g
 The most important possible extensions to the project regard the refinement of the grammar to create a more variegated and realistic building and the refinement of the post processing algorithm to deal with issues such as occlusion.
 
 Another possible extensions is to create an inverse procedural generation algorithm, but this task will probabily fall outside the scope of the project.
+
+### Grammar
+During the second week I started working on understanding how to develop a grammar and I took inspiration of the work done by Karl Gylleus during his thesis on procedurally
+generated virtual buildings. Gylleus had made use of a split grammar, which uses the rules: split, repeat, decompose and protrude.
+
+ -split(X,Y,Z) splits the left shapes into the given shapes on the right.
+ -repeat(X,Y,Z) works as the split rule but repeats a pattern as many types as there are space.
+ -decompose(XYZ) hollows out a cube and leaves the surfaces as thin cubes representing the facades. Simulates going down in dimensionality.
+ -protrude(XYZ) rescales a shape and moves it accordingly to the new size. Used for example to protrude a pillar/balcony from a facade wall.
+
+By starting from his work and developing my own rules, I manged to create quickly a first prototype of the model.
