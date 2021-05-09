@@ -90,13 +90,14 @@ The next step will be to understand if I can easly manage to adapt this shape gr
 
 <h1> Week 3</h1>
 
-I decided I didn't want to re-use the grammar used in Karl Gylleus's work because it didn't give me the possibility to reach the goal I intended to. In his project, Gylleus, mostly cared about 'printing' the elements of the buildings on different cubes and positioning them together in such a way to make it look like they were there. 
+I decided I didn't want to re-use the grammar used in Karl Gylleus's work because it didn't give me the possibility to reach the goal I intended to. In his project, Gylleus mostly cared about 'printing' the elements of the buildings on different cubes and positioning them together in such a way to make it look like they were there. 
+ 
+ 
+My main focus was to create buildings actually made up of GameObjects that represent the different elements of the building (doors, windows, walls,..) and that could eventually be modified by hand after the procedural generation. So, during this week I took a step back and decided to start from scratch in creating my language. 
+ 
+ 
+I decided to find a compromise between using the grammar and adding additional coding. My solution has been to define the behaviour of each structural element. Therefore when the elements of the grammar are generated, two functions are called:   
 
-
-My main focus was to create buildings actually made up of GameObject that represent the different elements of the building (doors,windows,walls,..) and that could eventually be modified by hand after the procedural generation.So, during this week I took a step back and decided to start from scratch in creating my language. 
-
-
-I decided to find a compromise between using a grammar and adding additional coding. My solution has been to define a class for each element of the house specifying its behaviour. Therefore when the elements of the grammar are generated, two functions are called:   
 
 ```cs
 public void spawnObject ()
@@ -104,9 +105,10 @@ public void spawnObject ()
 ```cs
 public  void adapt(List<Symbol> symbolsChildren)
 ```
-The first function instantiate a certain symbol of the grammar as a gameObject, while the second adapts the children of that Symbol to the gameObject.
-
-The besic algortihm for the generation of the Building is this:
+The first function instantiates a certain symbol of the grammar as a gameObject, while the second adapts the children of that Symbol to the gameObject.
+ 
+The basic algorithm for the generation of the Building is this:
+ 
 
 ```cs
     void Start()
@@ -145,9 +147,11 @@ The besic algortihm for the generation of the Building is this:
         prod.father.adapt(prod.children);
     }
 ```
+ 
+After devising the grammar and building the code needed to support it, I started developing the first elements, such as walls, windows, doors and roofs.
+These are the production rules that I've built up at the moment, but I'm planning to further implement other elements and to improve and extend already existing ones.
+ 
 
-After devising the grammar and building the code needed to support it, I started developing the first elements, such as walls, windows, doors, roofs and writing a basic grammar.
-This are the production rules that I've built up at the moment, but I'm planning to further implement other elements and to improve and extend already existing ones.
 
 ```
 _Building -> _GroundFloor _Floor _Floor _Roof
