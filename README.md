@@ -6,3 +6,6 @@ A solution to this can either be
 to reuse content throughout the world or to utilize procedural-generated content.
 
 The main advantages of procedural generation are to avoid the repetition given by reused content, allow for more realistic scenarios and also give the possibility to generate personalized environments. On the other side, the drawbacks of this technology are the increased computational complexity and the risk of generating non-realistic or non-plausible structures.
+
+
+Additional information on the project and on the development steps can be found on Github Pages at https://annatranquillini.github.io/Procedural-generator-for-exteriors-of-Stockholmstyle-buildings/
