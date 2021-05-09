@@ -1,0 +1,7 @@
+_Building -> _GroundFloor _Floor _Floor _Roof
+_Floor -> _Cornice _WallList _WallList _WallList _WallList | _WallList _WallList _WallList _WallList
+_GroundFloor -> _Cornice _Floor _Door
+_WallList -> Wall Wall Wall Wall
+_Roof -> Roof | Roof2 | Roof3
+_Door -> Door
+_Cornice -> Cornice
