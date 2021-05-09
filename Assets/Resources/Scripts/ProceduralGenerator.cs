@@ -26,7 +26,6 @@ public class ProceduralGenerator : MonoBehaviour
 
     void recursive(Production prod)
     {
-        //List<Transform> childrenTransform = new List<Transform>();
         foreach (Symbol child in prod.children)
         {
             if (child.isNonTerminal())
@@ -34,14 +33,12 @@ public class ProceduralGenerator : MonoBehaviour
                 Production p = grammar.getProduction(child);
                 p.father = child;
                 recursive(p);
-                //childrenTransform.Add(p.father.gameObject.transform);
                 Assert.IsNotNull(child.gameObject);
             }
             else
             {
                 child.spawnObject();
                 child.adapt();
-                //childrenTransform.Add(prod.children[i].gameObject.transform);
                 Assert.IsNotNull(child.gameObject);
             }
         }
