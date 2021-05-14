@@ -16,3 +16,32 @@
  If the size ends in 'N' it is a relative size that will be scaled to fit the parent shapes size.
  Inside '[ ]' constraint are declared that are used to telling when a rule can and cannot be invoked.
 
+
+
+producerWrite( struct *pc, data_t * d){
+    lock_acquire(pc->lock);
+
+    //scrivere nuovi dati
+    pc->data=d;
+    //settare il flag dei nuovi dati
+    pc->dataReady=1;
+    //rilasciare
+    cv_signal(pc->cv,pc->lock);
+    lock_release(pc->lock);
+
+}
+
+
+producerRead( struct *pc, data_t * d){
+
+    lock_acquire(pc->lock);
+
+    while(pc->dataReady==0)
+    {
+        cv_wait(pc->cv,pc->lock);
+    }
+    d=pc->data;
+    pc->dataRead=0;
+    lock->release(cgrfebjk)
+
+}

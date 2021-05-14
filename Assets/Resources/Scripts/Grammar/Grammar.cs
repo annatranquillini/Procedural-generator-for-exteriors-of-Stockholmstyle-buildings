@@ -127,12 +127,7 @@ public class Grammar
 
         switch (symbolString)
         {
-            case "Wall":
-                symbol = new Wall(symbolString);
-                break;
-            case "Window":
-                symbol = new Window(symbolString);
-                break;
+
             case "_Roof":
                 symbol = new Roof(symbolString);
                 break;
@@ -148,11 +143,23 @@ public class Grammar
             case "_GroundFloor":
                 symbol = new Floor(symbolString,true);
                 break;
+            case "_TopFloor":
+                symbol = new Floor(symbolString, true);
+                break;
             case "_WallList":
+                symbol = new WallList(symbolString);
+                break;
+            case "_Entrance":
                 symbol = new WallList(symbolString);
                 break;
             case "_Building":
                 symbol = new Building(symbolString);
+                break;
+            case "_Base":
+                symbol = new Base(symbolString);
+                break;
+            case "_Body":
+                symbol = new Body(symbolString);
                 break;
             default:
                 symbol = new Symbol(symbolString);

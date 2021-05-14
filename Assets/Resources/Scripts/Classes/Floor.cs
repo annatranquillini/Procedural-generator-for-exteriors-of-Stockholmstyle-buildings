@@ -10,7 +10,7 @@ public class Floor : Symbol
     public bool ground;
     public Material wallMaterial;
 
-    public Floor(string name, bool ground=false) : base(name)
+    public Floor(string name, bool ground = false) : base(name)
     {
 
         this.ground = ground;
@@ -35,17 +35,7 @@ public class Floor : Symbol
                 w.gameObject.transform.rotation = Quaternion.Euler(0, angle - 90, 0);
                 angle += angleStep;
             }
-            return;
         }
-        Floor f = symbolsChildren.Find(c => c is Floor) as Floor;
-        Door d = symbolsChildren.Find(c => c is Door) as Door;
-        Cornice co = symbolsChildren.Find(c => c is Cornice) as Cornice;
-        if (f.gameObject!=null && d.gameObject!=null)
-        {
 
-            d.gameObject.transform.position = f.gameObject.transform.position + new Vector3(f.sideLenght / 2, 0, 0);
-            return;
-        }
-        
     }
 }

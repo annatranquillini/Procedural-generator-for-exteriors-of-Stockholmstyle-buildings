@@ -15,12 +15,20 @@ public class WallList : Symbol
     public override void adapt(List<Symbol> symbolsChildren)
     {
         Transform t = this.gameObject.transform;
-        lenght = t.childCount;
-
-        for (int i = 0; i < lenght; i++)
+        List<Symbol> walls = symbolsChildren.FindAll(e => !( e is Door));
+        int i = 0;
+        Debug.Log("walls: "+walls.Count);
+        foreach ( Symbol w in walls)
         {
-            Transform children = t.GetChild(i);
-            children.position = t.position + new Vector3(0, 0, i-(float)lenght/2+0.5f);
+            w.gameObject.transform.position = t.position + new Vector3(0, 0, i-((float)walls.Count/2)+0.5f);
+            i++;
         }
+
+        if (symbolsChildren.Exists(c => c is Door))
+        {
+            Door d = symbolsChildren.Find(c => c is Door) as Door;
+            d.gameObject.transform.position = new Vector3(0, 0, 0);
+        }
+
     }
 }

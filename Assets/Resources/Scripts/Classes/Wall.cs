@@ -19,6 +19,6 @@ public class Wall : Symbol
 
     public override void adapt(List<Symbol> symbolsChildren)
     {
-        this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 90);
+        //this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 90);
     }
 }

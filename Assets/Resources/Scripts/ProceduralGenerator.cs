@@ -9,9 +9,14 @@ public class ProceduralGenerator : MonoBehaviour
     [SerializeField]
     private GameObject prefab;
     private Grammar grammar;
+    [SerializeField]
+    public Material materialWall;
+    [SerializeField]
+    public Material materialRoof;
     // Start is called before the first frame update
     void Start()
     {
+        setTheme();
         grammar = new Grammar();
         grammar.readRules();
         Production prod = grammar.getStartProduction();
@@ -23,7 +28,19 @@ public class ProceduralGenerator : MonoBehaviour
         }
 
     }
-
+    void setTheme()
+    {
+        List<Color> colors = new List<Color>();
+        colors.Add(new Color(0.64f, 0.64f, 0.64f));
+        colors.Add(new Color(0.64f, 0.64f, 0.80f));
+        colors.Add(new Color(0.36f, 0.38f, 0.42f));
+        colors.Add(new Color(0.63f, 0.51f, 0.44f));
+        int rnd = UnityEngine.Random.Range(0, colors.Count);
+        materialWall.SetColor("_Color", colors[rnd]);
+        colors.RemoveAt(rnd);
+        rnd = UnityEngine.Random.Range(0, colors.Count);
+        materialRoof.SetColor("_Color", colors[rnd]);
+    }
     void recursive(Production prod)
     {
         foreach (Symbol child in prod.children)

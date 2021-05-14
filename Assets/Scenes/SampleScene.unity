@@ -158,7 +158,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -361,6 +361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 100002, guid: 1cd7f3674ff21964f8cf0b9aa82a171d, type: 3}
+  materialWall: {fileID: 2100000, guid: 7101e74aec7e1ff48b1313195fe6511c, type: 2}
+  materialRoof: {fileID: 2100000, guid: 6e7e9f45c0dfff740b7e64978eac132c, type: 2}
 --- !u!4 &1171189623
 Transform:
   m_ObjectHideFlags: 0
@@ -389,14 +391,14 @@ PrefabInstance:
     - target: {fileID: 126507503503830201, guid: 14ec8c495e06fa4428c439ef2c919cb6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7159312d176a4c847b8c25c5f52c51a7, type: 2}
+      objectReference: {fileID: 2100000, guid: 14eeecc5efe311f47b1fe6a47499bc7a, type: 2}
     - target: {fileID: 126507503505731163, guid: 14ec8c495e06fa4428c439ef2c919cb6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 126507503505731163, guid: 14ec8c495e06fa4428c439ef2c919cb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 126507503505731163, guid: 14ec8c495e06fa4428c439ef2c919cb6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -448,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 126507503506092667, guid: 14ec8c495e06fa4428c439ef2c919cb6, type: 3}
       propertyPath: m_Name
-      value: Roof2
+      value: Grass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14ec8c495e06fa4428c439ef2c919cb6, type: 3}
