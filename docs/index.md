@@ -178,4 +178,16 @@ Here you can see a video showing the kind of building that I am able to generate
 </div>
 
 
+<h1> Week 4</h1>
+During this week I worked on making the building more complex by adding decorations to some of the architectonic elements. For instance, I created different types of windows by adding them different styles of pillars, I added cornices between floors, a foundation and a ground. I also increased the complexity of the grammar and I defined the new concept of theme for the whole building: before building up the grammar, the procedural generator selects randomly from a predefined set the colors to set for the walls and the roof, therefore adding randomness to the generation of the building.
+
+While the grammar is continuosly gaining non terminal and terminal sybols to adapt to the new elements I'm adding to building, the grammatical structure has remained unchanged and I'm trying to make the addition of new elements as smooth as possible.
+<p float="left">
+<img width="286" alt="Capture2" src="https://user-images.githubusercontent.com/37111311/118318755-1c9ff200-b4fa-11eb-8ec4-85148f0231a9.PNG" height="150">
+<img width="286" alt="Capture3" src="https://user-images.githubusercontent.com/37111311/118318756-1d388880-b4fa-11eb-8a75-a5ed73f2d841.PNG" height="150">
+<img width="488" alt="Capture1" src="https://user-images.githubusercontent.com/37111311/118318754-1c075b80-b4fa-11eb-87a2-a11579b9125a.PNG">
+</p>
+
+Since only a few days are missing until the deadline of the project, in the next days I will be working on some small refinment, but I will focus on writing the report and designing the perceptual study.
+
 
