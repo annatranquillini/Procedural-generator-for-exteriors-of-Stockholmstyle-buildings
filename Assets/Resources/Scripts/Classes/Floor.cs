@@ -30,7 +30,7 @@ public class Floor : Symbol
             foreach (Symbol child in wl)
             {
                 WallList w = child as WallList;
-                Vector3 vec = new Vector3(0, 0, sideLenght / (2 * (Mathf.Tan(Mathf.PI / s))));
+                Vector3 vec = new Vector3(0, 0, (sideLenght / (2 * (Mathf.Tan(Mathf.PI / s))))+0.05f);
                 w.gameObject.transform.position += Quaternion.Euler(0, angle, 0) * vec;
                 w.gameObject.transform.rotation = Quaternion.Euler(0, angle - 90, 0);
                 angle += angleStep;

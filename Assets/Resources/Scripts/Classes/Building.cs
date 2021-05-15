@@ -29,7 +29,9 @@ public class Building :Symbol
             }
             if (el is Floor)
             {
+
                 (el as Floor).floorNumber = i;
+              
                 el.gameObject.transform.position += new Vector3(0, h+0.5f, 0);
                 h+=1;
             }
@@ -37,6 +39,7 @@ public class Building :Symbol
             {
                 el.gameObject.transform.position += new Vector3(0, h, 0);
                 el.gameObject.transform.localScale +=new  Vector3(sideLenght-1, 0, sideLenght-1);
+                el.gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
             }
             else if(el is Base)
             {

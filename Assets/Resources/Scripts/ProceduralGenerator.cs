@@ -30,16 +30,20 @@ public class ProceduralGenerator : MonoBehaviour
     }
     void setTheme()
     {
-        List<Color> colors = new List<Color>();
-        colors.Add(new Color(0.64f, 0.64f, 0.64f));
-        colors.Add(new Color(0.64f, 0.64f, 0.80f));
-        colors.Add(new Color(0.36f, 0.38f, 0.42f));
-        colors.Add(new Color(0.63f, 0.51f, 0.44f));
-        int rnd = UnityEngine.Random.Range(0, colors.Count);
-        materialWall.SetColor("_Color", colors[rnd]);
-        colors.RemoveAt(rnd);
-        rnd = UnityEngine.Random.Range(0, colors.Count);
-        materialRoof.SetColor("_Color", colors[rnd]);
+        List<Color> wallColors = new List<Color>();
+        wallColors.Add(new Color(0.64f, 0.64f, 0.64f));
+        //wallColors.Add(new Color(0.64f, 0.64f, 0.80f));
+        wallColors.Add(new Color(0.36f, 0.38f, 0.42f));
+        wallColors.Add(new Color(0.63f, 0.51f, 0.44f));
+        int rnd = UnityEngine.Random.Range(0, wallColors.Count);
+        materialWall.SetColor("_Color", wallColors[rnd]);
+        List<Color> roofColors = new List<Color>();
+        roofColors.Add(new Color(0.33f, 0.11f, 0.004f));
+        roofColors.Add(new Color(0.24f, 0.26f, 0.247f));
+        roofColors.Add(new Color(0.19f, 0.29f, 0.23f));
+        roofColors.Add(new Color(0.0f, 0.0f, 0.0f));
+        rnd = UnityEngine.Random.Range(0, roofColors.Count);
+        materialRoof.SetColor("_Color", roofColors[rnd]);
     }
     void recursive(Production prod)
     {

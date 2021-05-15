@@ -27,7 +27,7 @@ public class WallList : Symbol
         if (symbolsChildren.Exists(c => c is Door))
         {
             Door d = symbolsChildren.Find(c => c is Door) as Door;
-            d.gameObject.transform.position = new Vector3(0, 0, 0);
+            //d.gameObject.transform.position = new Vector3(0, 0, 0);
         }
 
     }
