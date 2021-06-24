@@ -217,15 +217,7 @@ Since only a few days are missing until the deadline of the project, in the next
 </div>
 
 <h1> Demo </h1>
-
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Procedural Generator</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body>
+<div>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
       <div id="unity-loading-bar">
@@ -250,7 +242,7 @@ Since only a few days are missing until the deadline of the project, in the next
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Procedural Generator",
-        productVersion: "0.1",
+        productVersion: "0.1"
       };
 
       var container = document.querySelector("#unity-container");
@@ -284,4 +276,4 @@ Since only a few days are missing until the deadline of the project, in the next
       };
       document.body.appendChild(script);
     </script>
-  </body>
+</div>
