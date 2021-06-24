@@ -217,4 +217,5 @@ Since only a few days are missing until the deadline of the project, in the next
 </div>
 
 <h1> Demo </h1>
+This is a demo: keyboard arrows can be used to move around the world.
 Link to demo: [link](https://annatranquillini.github.io/Procedural-generator-for-exteriors-of-Stockholmstyle-buildings/demo)
