@@ -1,10 +1,10 @@
-_Building -> _Base _GroundFloor _Body _Cornice _Cornice _Roof | _GroundFloor _Body _Cornice _Roof
-_Body -> _Floor _Cornice _Floor | _Floor _Cornice _Floor _Floor | _Floor _Cornice _Floor _Cornice _Floor _Floor
+_Building -> _Base _GroundFloor _Cornice _Body _Cornice _Cornice _Roof | _GroundFloor _Cornice _Body _Cornice _Roof
+_Body -> _Floor | _Floor _Cornice _Floor | _Floor _Floor _Cornice _Floor | _Floor _Cornice _Floor _Cornice _Floor | _Floor _Cornice _Floor _Floor _Floor
 _Floor -> _WallList _WallList _WallList _WallList
 _GroundFloor -> _Entrance _WallList _Entrance _WallList | _Entrance _WallList _WallList _WallList
 _WallList -> Wall1 Wall1 Wall1 Wall1 | Wall2 Wall2 Wall2 Wall2 | Wall3 Wall3 Wall3 Wall3
 _Entrance -> Wall1 Wall0 Wall0 Wall1 _Door
 _Roof -> Roof6 | Roof7
 _Door -> Door1 | Door2
-_Cornice -> Cornice | Cornice2
+_Cornice -> Cornice | Cornice2 | Cornice3
 _Base -> Base

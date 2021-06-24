@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour {
 
-    public float accelerationSpeed = 10.0f;
-    public float rotationSpeed = 20.0f;
+    public float accelerationSpeed = 310.0f;
+    public float rotationSpeed = 5.0f;
     public GameObject rotatingAround;
 
     private Rigidbody rigid;

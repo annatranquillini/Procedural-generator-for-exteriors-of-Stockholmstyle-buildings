@@ -16,15 +16,19 @@ public class ProceduralGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        setTheme();
+        
         grammar = new Grammar();
         grammar.readRules();
         Production prod = grammar.getStartProduction();
         if (prod != null)
         {
-            GameObject go = GameObject.Find("ProGen");
-            //Instantiate(go, new Vector3(0, 0, 0), Quaternion.identity);
-            recursive(prod);
+            for(int i=0;i<4; i++)
+            {
+                setTheme();
+                Symbol s=recursive(prod);
+                s.gameObject.transform.position += new Vector3(5 * i, 0, 5 * i);
+            }
+
         }
 
     }
@@ -36,6 +40,7 @@ public class ProceduralGenerator : MonoBehaviour
         wallColors.Add(new Color(0.36f, 0.38f, 0.42f));
         wallColors.Add(new Color(0.63f, 0.51f, 0.44f));
         int rnd = UnityEngine.Random.Range(0, wallColors.Count);
+        Debug.Log("rnd: "+rnd);
         materialWall.SetColor("_Color", wallColors[rnd]);
         List<Color> roofColors = new List<Color>();
         roofColors.Add(new Color(0.33f, 0.11f, 0.004f));
@@ -45,7 +50,8 @@ public class ProceduralGenerator : MonoBehaviour
         rnd = UnityEngine.Random.Range(0, roofColors.Count);
         materialRoof.SetColor("_Color", roofColors[rnd]);
     }
-    void recursive(Production prod)
+
+    Symbol recursive(Production prod)
     {
         foreach (Symbol child in prod.children)
         {
@@ -70,6 +76,7 @@ public class ProceduralGenerator : MonoBehaviour
             element.gameObject.transform.parent = prod.father.gameObject.transform;
         }
         prod.father.adapt(prod.children);
+        return prod.father;
     }
 
     // Update is called once per frame

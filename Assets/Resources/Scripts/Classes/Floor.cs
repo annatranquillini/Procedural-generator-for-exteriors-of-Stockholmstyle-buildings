@@ -7,13 +7,9 @@ public class Floor : Symbol
 {
     public int floorNumber;
     public int sideLenght;
-    public bool ground;
-    public Material wallMaterial;
 
     public Floor(string name, bool ground = false) : base(name)
     {
-
-        this.ground = ground;
     }
 
     public override void adapt(List<Symbol> symbolsChildren)
@@ -22,9 +18,7 @@ public class Floor : Symbol
         if (wl.Count > 0)
         {
             sideLenght = wl.Count;
-
             float angle = 0;
-
             float s = wl.Count;
             float angleStep = 360 / s;
             foreach (Symbol child in wl)

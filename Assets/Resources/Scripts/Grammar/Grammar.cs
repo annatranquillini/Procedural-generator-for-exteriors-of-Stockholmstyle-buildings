@@ -8,19 +8,16 @@ using System;
 public class Grammar
 {
     List<Rule> rules;
-    Dictionary<string, Symbol> symbols;
-    string ruleFileName = "rules.txt";
-    int lineNr = 0;
-
 
     public Grammar()
     {
         this.rules = new List<Rule>();
-        this.symbols = new Dictionary<string, Symbol>();
     }
 
     public void readRules()
     {
+        string ruleFileName = "rules.txt";
+        int lineNr = 0;
         string filePath = Application.dataPath + "/" + ruleFileName;
         if (!File.Exists(filePath))
         {
@@ -65,17 +62,8 @@ public class Grammar
 
     public Production getProduction(Symbol symbol)
     {
-        //for (int i = 0; i < rules.Count; i++)
-        //{
-        //    string a = rules[i].father.name;
-        //    string b = symbol.name;
-        //    if (a.Equals(b))
-        //        return rules[i].children[0];
-        //}
-        Rule  r = rules.Find(ru => ru.father.name.Equals(symbol.name));
-        int rnd = UnityEngine.Random.Range(0, r.children.Count );
-        if(r.children.Count>1)
-            Debug.Log("Text: " + rnd);
+        Rule r = rules.Find(ru => ru.father.name.Equals(symbol.name));
+        int rnd = UnityEngine.Random.Range(0, r.children.Count);
         return r.children[rnd];
     }
 
@@ -141,7 +129,7 @@ public class Grammar
                 symbol = new Floor(symbolString);
                 break;
             case "_GroundFloor":
-                symbol = new Floor(symbolString,true);
+                symbol = new Floor(symbolString, true);
                 break;
             case "_TopFloor":
                 symbol = new Floor(symbolString, true);
@@ -171,7 +159,7 @@ public class Grammar
     }
     private void throwSyntaxError(string error)
     {
-        string errorText = "Invalid rule syntax: " + error + "  (line: " + lineNr + ")";
+        string errorText = "Invalid rule syntax: " + error ;
         Debug.LogError(errorText);
         throw new Exception(errorText);
     }

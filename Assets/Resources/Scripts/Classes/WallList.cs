@@ -5,7 +5,6 @@ using UnityEngine;
 public class WallList : Symbol
 {
     int lenght;
-    public Material wallMaterial;
 
     public WallList(string name) : base(name)
     {
@@ -22,6 +21,9 @@ public class WallList : Symbol
         {
             w.gameObject.transform.position = t.position + new Vector3(0, 0, i-((float)walls.Count/2)+0.5f);
             i++;
+            //MeshRenderer meshRenderer = w.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>();
+            Material night = Resources.Load("Materials/Glass", typeof(Material)) as Material;
+            //meshRenderer.material = night;
         }
 
         if (symbolsChildren.Exists(c => c is Door))
